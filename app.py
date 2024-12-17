@@ -5,7 +5,7 @@ import glob
 import re
 
 # Set the resolution of the images
-resolution = [96, 96]  # You can modify this resolution dynamically
+resolution = [96, 96] 
 
 def rgb_to_565(r, g, b):
     """
@@ -38,7 +38,6 @@ def sanitize_variable_name(name):
     """
     valid_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
     sanitized = ''.join(c if c in valid_chars else '_' for c in name)
-    # Ensure the name doesn't start with a number
     if sanitized and sanitized[0].isdigit():
         sanitized = "_" + sanitized
     return sanitized
